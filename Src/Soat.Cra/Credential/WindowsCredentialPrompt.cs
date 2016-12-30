@@ -65,7 +65,7 @@ namespace Soat.Cra.Credential
             CREDUI_INFO credui = new CREDUI_INFO();
 
             credui.pszCaptionText = "Please enter the credentails";
-            credui.pszMessageText = "DisplayedMessage";
+            credui.pszMessageText = "GMail account credentials must be provided for Sonet authentication.";
             credui.cbSize = Marshal.SizeOf(credui);
 
             uint authPackage = 0;

@@ -16,3 +16,7 @@
 * Authenticate yourself using your GMail account (ex: *********@soat.fr)
   * Credentials are stored in Windows Credentials Manager
 * Enjoy :)
+
+## Thanks to contributors
+
+Thanks to all contributors and testors especialy [Vincent Bourdon](https://github.com/evilz?tab=repositories) providing the initial version of the project.

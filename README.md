@@ -7,7 +7,7 @@
 
 ## How does it works
 
-* Download the latest release (NOT AVAILABLE YET)
+* Download [the latest release](https://github.com/julien-amar/soat-cra/releases/)
 * Edit application settings :
   * **CRA.Signature** : Signature file used to watermark downloaded documents.
   * **Mailing.From** : The sender fullname (should be your name)

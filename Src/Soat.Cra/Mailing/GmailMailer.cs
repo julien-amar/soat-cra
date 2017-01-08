@@ -13,25 +13,28 @@ namespace Soat.Cra.Mailing
 
         private readonly string _mailFrom;
         private readonly string _mailTo;
+        private readonly string _mailToAddress;
         private readonly string _mailSubject;
 
         public GmailMailer(ITemplater templater)
         {
             _templater = templater;
 
-            _mailFrom = ConfigurationManager.AppSettings["Mailing.From"];
-            _mailTo = ConfigurationManager.AppSettings["Mailing.To"];
+            _mailFrom = ConfigurationManager.AppSettings["Mailing.From.Name"];
+            _mailTo = ConfigurationManager.AppSettings["Mailing.To.Name"];
+            _mailToAddress = ConfigurationManager.AppSettings["Mailing.To.Address"];
             _mailSubject = ConfigurationManager.AppSettings["Mailing.Subject"];
         }
 
         public void Mail(UserAccount account, IEnumerable<string> attachedFiles, int month, int year)
         {
             var fromAddress = new MailAddress(account.Username, _mailFrom);
-            var toAddress = new MailAddress(_mailTo, _mailTo);
+            var toAddress = new MailAddress(_mailToAddress, _mailTo);
 
             var subject = _mailSubject;
             var body = _templater.Template(new Dictionary<string, string>
             {
+                { "Destinataire", _mailTo },
                 { "Month", month.ToString() },
                 { "Year", year.ToString() },
                 { "Signature", _mailFrom }

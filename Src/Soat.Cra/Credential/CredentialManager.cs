@@ -51,6 +51,8 @@ namespace Soat.Cra.Credential
                 {
                     return null;
                 }
+
+                credential = new CredentialManagement.Credential(prompt.UserName, prompt.Password);
 			}
 
 			return new UserAccount(credential.Username.Split(new char[] { '\\' }).Last(), credential.Password);

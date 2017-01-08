@@ -10,7 +10,7 @@
 * Download [the latest release](https://github.com/julien-amar/soat-cra/releases/)
 * Edit application settings :
   * **CRA.Signature** : Signature file used to watermark downloaded documents.
-  * **Mailing.From** : The sender fullname (should be your name)
+  * **Mailing.From.Name** : The sender fullname (should be your name)
 * Run the executable
 * Enter the month & year your want to process
 * Authenticate yourself using your GMail account (ex: *********@soat.fr)
